@@ -45,10 +45,20 @@ df = load_data()
 # -----------------------
 # MODEL LOAD
 # -----------------------
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "models" / "best_model.pth"
+
 @st.cache_resource
 def load_model():
     model = MultimodalICUModel().to(DEVICE)
-    model.load_state_dict(torch.load("models/best_model.pth", map_location=DEVICE))
+
+    if not MODEL_PATH.exists():
+        st.error(f"Model file not found: {MODEL_PATH}")
+        st.stop()
+
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
     model.eval()
     return model
 

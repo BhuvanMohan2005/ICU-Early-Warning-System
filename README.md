@@ -1,10 +1,6 @@
 # 🏥 ICU Early Warning System
 ### AI-Powered ICU Deterioration Prediction using Machine Learning & Deep Learning
 
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()
-[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg)]()
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange.svg)]()
-[![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-ff4b4b.svg)]()
 
 ---
 

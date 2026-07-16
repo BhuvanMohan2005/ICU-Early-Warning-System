@@ -48,7 +48,7 @@ df = load_data()
 @st.cache_resource
 def load_model():
     model = MultimodalICUModel().to(DEVICE)
-    model.load_state_dict(torch.load("best_model.pth", map_location=DEVICE))
+    model.load_state_dict(torch.load("models/best_model.pth", map_location=DEVICE))
     model.eval()
     return model
 

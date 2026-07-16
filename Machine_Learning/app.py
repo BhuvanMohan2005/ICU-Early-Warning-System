@@ -15,10 +15,16 @@ st.set_page_config(
 # -----------------------------
 # Load Model
 # -----------------------------
+from pathlib import Path
 
-model = joblib.load("models/best_model.pkl")
-scaler = joblib.load("models/scaler.pkl")
-features = joblib.load("models/features.pkl")
+BASE_DIR = Path(__file__).parent
+
+MODEL_PATH = BASE_DIR / "models/best_model.pth"
+model = joblib.load(MODEL_PATH)
+SCALER_PATH = BASE_DIR / "models/scaler.pkl"
+scaler = joblib.load(SCALER_PATH)
+FEATURES_PATH = BASE_DIR / "models/features.pkl"
+features = joblib.load(FEATURES_PATH)
 
 # -----------------------------
 # Header

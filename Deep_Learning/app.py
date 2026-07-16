@@ -28,9 +28,17 @@ STATIC_FEATURES = [
 # -----------------------
 # DATA LOAD
 # -----------------------
+from pathlib import Path
+import pandas as pd
+
+BASE_DIR = Path(__file__).resolve().parent
+
 @st.cache_data
 def load_data():
-    return pd.read_csv("Dataset/processed_data/test.csv")
+    csv_path = BASE_DIR / "Dataset" / "processed_data" / "test.csv"
+    st.write("Looking for:", csv_path)
+    st.write("Exists:", csv_path.exists())
+    return pd.read_csv(csv_path)
 
 df = load_data()
 

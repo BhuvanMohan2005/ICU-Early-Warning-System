@@ -30,7 +30,7 @@ STATIC_FEATURES = [
 # -----------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("processed_data/test.csv")
+    return pd.read_csv("Dataset/processed_data/test.csv")
 
 df = load_data()
 

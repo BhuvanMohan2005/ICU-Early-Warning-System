@@ -19,7 +19,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 
-MODEL_PATH = BASE_DIR / "models"/"best_model.pth"
+MODEL_PATH = BASE_DIR / "models"/"best_model.pkl"
 model = joblib.load(MODEL_PATH)
 SCALER_PATH = BASE_DIR / "models"/"scaler.pkl"
 scaler = joblib.load(SCALER_PATH)

@@ -36,8 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent
 @st.cache_data
 def load_data():
     csv_path = BASE_DIR / "Dataset" / "processed_data" / "test.csv"
-    st.write("Looking for:", csv_path)
-    st.write("Exists:", csv_path.exists())
+
     return pd.read_csv(csv_path)
 
 df = load_data()
